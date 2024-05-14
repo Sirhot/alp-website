@@ -1,4 +1,5 @@
 import React from 'react'
+import image from '../images/main-image.jpg'
 
 export default function Home() {
     return (
@@ -17,6 +18,10 @@ export default function Home() {
                     <a href="#"><i class='bx bxl-instagram'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
                     <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bx-envelope'></i></a>
+                </div>
+                <div className="home-image">
+                    <img src={image} alt="main_image" />
                 </div>
             </section>
         </div>
