@@ -78,7 +78,7 @@ body {
 }
 
 .home {
-    margin-top: 200px;
+    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -180,6 +180,7 @@ body {
     font-size: 19px;
     color: #3a0853;
     text-decoration: none;
+    cursor: pointer;
     font-weight: 600;
     z-index: 1;
     overflow: hidden;
@@ -317,7 +318,7 @@ body {
 }
 
 .about .container {
-    margin-top: 200px;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -327,7 +328,6 @@ body {
     position: relative;
     font-size: 40px;
     font-weight: 500;
-    line-height: 1.2;
 }
 
 .about .container h1::before {
@@ -439,7 +439,7 @@ body {
 
 
 .portfolio .container {
-    margin-top: 200px;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -449,7 +449,6 @@ body {
     position: relative;
     font-size: 40px;
     font-weight: 500;
-    line-height: 1.2;
 }
 
 .portfolio .container h1::before {
@@ -512,26 +511,24 @@ body {
     line-height: 2.2;
 }
 
-.project-btns a {
+.project-btns button {
     position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     width: 150px;
     height: 60px;
     background: #3a0853;
     border: 2px solid blueviolet;
     border-radius: 30px;
-    font-size: 17px;
+    font-size: 18px;
     color: blueviolet;
     text-decoration: none;
+    cursor: pointer;
     font-weight: 600;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
 
-.project-btns a::before {
+.project-btns button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -543,13 +540,131 @@ body {
     transition: .5s;
 }
 
-.project-btns a:hover::before {
+.project-btns button:hover::before {
     width: 100%;
 }
 
-.project-btns a:hover {
+.project-btns button:hover {
     color: #3a0853;
 }
+
+#focused-img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #3a0853;
+    z-index: 98;
+}
+
+#focused-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a0853;
+    animation: showRight 2.5s ease forwards;
+    animation-delay: .3s;
+    z-index: 99;
+}
+
+#focused-img #details {
+    width: 1200px;
+    height: 90%;
+    display: inline-flex;
+    padding: 5%;
+    gap: 5%;
+    font-size: larger;
+}
+
+#focused-img #details img {
+    max-width: 100%;
+    height: auto;
+}
+
+#focused-img span {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+/* BLOG */
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+.blog .container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog .container h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.blog .container h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a0853;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: .7s;
+}
+
+.search-bar {
+    background-color: white;
+    width: max-content;
+    margin: 2.5rem auto 4rem auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background-color: #f0f0f0;
+    outline: none;
+    border: none;
+}
+
+.search-bar span {
+    padding-right: .5rem;
+    cursor: pointer;
+}
+
+.search-bar button {
+    outline: none;
+    border: none;
+    padding: .3rem 1rem;
+    border-radius: 5px;
+    background-color: #0f52ba;
+    color: #fff;
+}
+
 
 /* KEYFRAMES ANIMATION */
 @keyframes showRight {
