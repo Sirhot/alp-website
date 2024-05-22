@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Portfolio.css"
 import { portfolioList } from '../config/portfolio-data'
 import PortfolioItem from '../components/PortfolioItem'
 // if require method doesnt work: 

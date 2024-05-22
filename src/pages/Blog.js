@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Blog.css"
 import BlogItem from '../components/BlogItem'
 import { blogList } from '../config/data'
 
@@ -33,12 +34,13 @@ export default function Blog() {
                                 value={searchKey}
                             />
                             {searchKey && <span onClick={handleClearSearch}>x</span>}
-                            <button>Go</button>
+                            <button><i class='bx bx-search bx-sm'></i></button>
                         </form>
                     </div>
                     {!blogs.length ?
                         <div className="empty-list">
-                            <img src="/assets/images/13525-empty.gif" alt="empty" />
+                            <i class='bx bx-error-circle bx-lg'></i>
+                            <p>Not Found</p>
                         </div>
                         :
                         <div className="blog-list">

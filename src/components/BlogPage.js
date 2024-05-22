@@ -1,4 +1,5 @@
 import React from 'react'
+import "./BlogPage.css"
 import { useParams, Link } from 'react-router-dom'
 import { blogList } from "../config/data"
 
@@ -12,7 +13,7 @@ function BlogPage() {
         if (blog) {
             setBlog(blog)
         }
-    }, [id]);
+    }, []);
 
     return (
         <div>
@@ -34,7 +35,8 @@ function BlogPage() {
 
                         </div>) :
                         (<div className="empty-list">
-                            <img src="/assets/images/13525-empty.gif" alt="empty" />
+                            <i class='bx bx-error-circle bx-lg'></i>
+                            <p>Not Found</p>
                         </div>)
                     }
                     <Link className='blogpage-goback' to='/blog'>

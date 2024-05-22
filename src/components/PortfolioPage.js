@@ -1,4 +1,5 @@
 import React from 'react'
+import "./PortfolioPage.css"
 import { useParams, Link } from 'react-router-dom'
 import { portfolioList } from "../config/portfolio-data"
 

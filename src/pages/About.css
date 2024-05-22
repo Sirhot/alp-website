@@ -1,0 +1,134 @@
+/* ABOUT */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 10%;
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .container h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.about .container h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    animation: showRight 1.5s ease forwards;
+    animation-delay: .7s;
+}
+
+.details {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4%;
+    margin-top: 5%;
+}
+
+.details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    animation: showRight 4s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.details img {
+    width: 500px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+.exp_school {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 150px;
+    gap: 5%;
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: max-content;
+    max-width: 400px;
+    height: 150px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    line-height: 17px;
+}
+
+.school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: max-content;
+    max-width: 400px;
+    height: 150px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+}
+
+.exp div,
+.school div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    line-height: 15px;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.school div {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 900px) {
+    .details {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .details img {
+        width: 100%;
+        height: 200px;
+    }
+}
